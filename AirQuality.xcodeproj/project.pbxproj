@@ -7,9 +7,12 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		B92D007820F38A510080360E /* Station.swift in Sources */ = {isa = PBXBuildFile; fileRef = B92D007720F38A510080360E /* Station.swift */; };
+		B92D007A20F38A600080360E /* City.swift in Sources */ = {isa = PBXBuildFile; fileRef = B92D007920F38A600080360E /* City.swift */; };
+		B92D007C20F38A740080360E /* Commune.swift in Sources */ = {isa = PBXBuildFile; fileRef = B92D007B20F38A740080360E /* Commune.swift */; };
+		B92D007E20F38A880080360E /* Sensor.swift in Sources */ = {isa = PBXBuildFile; fileRef = B92D007D20F38A880080360E /* Sensor.swift */; };
+		B92D008020F38AA50080360E /* AqIndex.swift in Sources */ = {isa = PBXBuildFile; fileRef = B92D007F20F38AA50080360E /* AqIndex.swift */; };
 		B99B54F120F381B10044C317 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B99B54F020F381B10044C317 /* AppDelegate.swift */; };
-		B99B54F320F381B10044C317 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B99B54F220F381B10044C317 /* ViewController.swift */; };
-		B99B54F620F381B10044C317 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B99B54F420F381B10044C317 /* Main.storyboard */; };
 		B99B54F820F381B30044C317 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B99B54F720F381B30044C317 /* Assets.xcassets */; };
 		B99B54FB20F381B30044C317 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B99B54F920F381B30044C317 /* LaunchScreen.storyboard */; };
 		B99B550620F381B30044C317 /* AirQualityTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B99B550520F381B30044C317 /* AirQualityTests.swift */; };
@@ -34,10 +37,13 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		B92D007720F38A510080360E /* Station.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Station.swift; sourceTree = "<group>"; };
+		B92D007920F38A600080360E /* City.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = City.swift; sourceTree = "<group>"; };
+		B92D007B20F38A740080360E /* Commune.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Commune.swift; sourceTree = "<group>"; };
+		B92D007D20F38A880080360E /* Sensor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Sensor.swift; sourceTree = "<group>"; };
+		B92D007F20F38AA50080360E /* AqIndex.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AqIndex.swift; sourceTree = "<group>"; };
 		B99B54ED20F381B10044C317 /* AirQuality.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AirQuality.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B99B54F020F381B10044C317 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		B99B54F220F381B10044C317 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		B99B54F520F381B10044C317 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		B99B54F720F381B30044C317 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		B99B54FA20F381B30044C317 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		B99B54FC20F381B30044C317 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -97,9 +103,8 @@
 		B99B54EF20F381B10044C317 /* AirQuality */ = {
 			isa = PBXGroup;
 			children = (
+				B99B551E20F382080044C317 /* Module */,
 				B99B54F020F381B10044C317 /* AppDelegate.swift */,
-				B99B54F220F381B10044C317 /* ViewController.swift */,
-				B99B54F420F381B10044C317 /* Main.storyboard */,
 				B99B54F720F381B30044C317 /* Assets.xcassets */,
 				B99B54F920F381B30044C317 /* LaunchScreen.storyboard */,
 				B99B54FC20F381B30044C317 /* Info.plist */,
@@ -123,6 +128,58 @@
 				B99B551220F381B30044C317 /* Info.plist */,
 			);
 			path = AirQualityUITests;
+			sourceTree = "<group>";
+		};
+		B99B551E20F382080044C317 /* Module */ = {
+			isa = PBXGroup;
+			children = (
+				B99B551F20F3820B0044C317 /* AirQuality */,
+			);
+			path = Module;
+			sourceTree = "<group>";
+		};
+		B99B551F20F3820B0044C317 /* AirQuality */ = {
+			isa = PBXGroup;
+			children = (
+				B99B552220F382250044C317 /* Model */,
+				B99B552120F382200044C317 /* ViewModel */,
+				B99B552020F3821C0044C317 /* View */,
+			);
+			path = AirQuality;
+			sourceTree = "<group>";
+		};
+		B99B552020F3821C0044C317 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				B99B552320F3822A0044C317 /* Storyboard */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		B99B552120F382200044C317 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		B99B552220F382250044C317 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				B92D007720F38A510080360E /* Station.swift */,
+				B92D007920F38A600080360E /* City.swift */,
+				B92D007B20F38A740080360E /* Commune.swift */,
+				B92D007D20F38A880080360E /* Sensor.swift */,
+				B92D007F20F38AA50080360E /* AqIndex.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		B99B552320F3822A0044C317 /* Storyboard */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Storyboard;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -231,7 +288,6 @@
 			files = (
 				B99B54FB20F381B30044C317 /* LaunchScreen.storyboard in Resources */,
 				B99B54F820F381B30044C317 /* Assets.xcassets in Resources */,
-				B99B54F620F381B10044C317 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -256,8 +312,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				B99B54F320F381B10044C317 /* ViewController.swift in Sources */,
+				B92D007C20F38A740080360E /* Commune.swift in Sources */,
+				B92D007E20F38A880080360E /* Sensor.swift in Sources */,
+				B92D007820F38A510080360E /* Station.swift in Sources */,
 				B99B54F120F381B10044C317 /* AppDelegate.swift in Sources */,
+				B92D008020F38AA50080360E /* AqIndex.swift in Sources */,
+				B92D007A20F38A600080360E /* City.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -293,14 +353,6 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
-		B99B54F420F381B10044C317 /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				B99B54F520F381B10044C317 /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		B99B54F920F381B30044C317 /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
