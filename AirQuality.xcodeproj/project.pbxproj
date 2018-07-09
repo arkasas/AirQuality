@@ -7,6 +7,22 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		370E46A720F3D38B003ED365 /* AirQuality.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 370E46A620F3D38B003ED365 /* AirQuality.storyboard */; };
+		370E46A920F3D3A2003ED365 /* AirQualityViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 370E46A820F3D3A2003ED365 /* AirQualityViewController.swift */; };
+		370E46AC20F3D402003ED365 /* AirQualityViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 370E46AB20F3D402003ED365 /* AirQualityViewModel.swift */; };
+		370E46AF20F3D41D003ED365 /* AirAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 370E46AE20F3D41D003ED365 /* AirAPI.swift */; };
+		370E46B120F3D45E003ED365 /* StationRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 370E46B020F3D45E003ED365 /* StationRouter.swift */; };
+		370E46B320F3D54F003ED365 /* AllStationRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 370E46B220F3D54F003ED365 /* AllStationRequest.swift */; };
+		37A46A7920F3D2640019C81C /* ParameterEncoder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37A46A6F20F3D2630019C81C /* ParameterEncoder.swift */; };
+		37A46A7A20F3D2640019C81C /* URLParameterEncoder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37A46A7020F3D2630019C81C /* URLParameterEncoder.swift */; };
+		37A46A7B20F3D2640019C81C /* JSONParameterEncoder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37A46A7120F3D2630019C81C /* JSONParameterEncoder.swift */; };
+		37A46A7C20F3D2640019C81C /* Response.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37A46A7220F3D2640019C81C /* Response.swift */; };
+		37A46A7D20F3D2640019C81C /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37A46A7320F3D2640019C81C /* Constants.swift */; };
+		37A46A7E20F3D2640019C81C /* API.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37A46A7420F3D2640019C81C /* API.swift */; };
+		37A46A7F20F3D2640019C81C /* HTTPMethod.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37A46A7520F3D2640019C81C /* HTTPMethod.swift */; };
+		37A46A8020F3D2640019C81C /* Request.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37A46A7620F3D2640019C81C /* Request.swift */; };
+		37A46A8120F3D2640019C81C /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 37A46A7720F3D2640019C81C /* Info.plist */; };
+		37A46A8220F3D2640019C81C /* Router.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37A46A7820F3D2640019C81C /* Router.swift */; };
 		B92D007820F38A510080360E /* Station.swift in Sources */ = {isa = PBXBuildFile; fileRef = B92D007720F38A510080360E /* Station.swift */; };
 		B92D007A20F38A600080360E /* City.swift in Sources */ = {isa = PBXBuildFile; fileRef = B92D007920F38A600080360E /* City.swift */; };
 		B92D007C20F38A740080360E /* Commune.swift in Sources */ = {isa = PBXBuildFile; fileRef = B92D007B20F38A740080360E /* Commune.swift */; };
@@ -37,6 +53,22 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		370E46A620F3D38B003ED365 /* AirQuality.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = AirQuality.storyboard; sourceTree = "<group>"; };
+		370E46A820F3D3A2003ED365 /* AirQualityViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AirQualityViewController.swift; sourceTree = "<group>"; };
+		370E46AB20F3D402003ED365 /* AirQualityViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AirQualityViewModel.swift; sourceTree = "<group>"; };
+		370E46AE20F3D41D003ED365 /* AirAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AirAPI.swift; sourceTree = "<group>"; };
+		370E46B020F3D45E003ED365 /* StationRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StationRouter.swift; sourceTree = "<group>"; };
+		370E46B220F3D54F003ED365 /* AllStationRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AllStationRequest.swift; sourceTree = "<group>"; };
+		37A46A6F20F3D2630019C81C /* ParameterEncoder.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ParameterEncoder.swift; sourceTree = "<group>"; };
+		37A46A7020F3D2630019C81C /* URLParameterEncoder.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = URLParameterEncoder.swift; sourceTree = "<group>"; };
+		37A46A7120F3D2630019C81C /* JSONParameterEncoder.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JSONParameterEncoder.swift; sourceTree = "<group>"; };
+		37A46A7220F3D2640019C81C /* Response.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Response.swift; sourceTree = "<group>"; };
+		37A46A7320F3D2640019C81C /* Constants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		37A46A7420F3D2640019C81C /* API.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = API.swift; sourceTree = "<group>"; };
+		37A46A7520F3D2640019C81C /* HTTPMethod.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HTTPMethod.swift; sourceTree = "<group>"; };
+		37A46A7620F3D2640019C81C /* Request.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Request.swift; sourceTree = "<group>"; };
+		37A46A7720F3D2640019C81C /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		37A46A7820F3D2640019C81C /* Router.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Router.swift; sourceTree = "<group>"; };
 		B92D007720F38A510080360E /* Station.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Station.swift; sourceTree = "<group>"; };
 		B92D007920F38A600080360E /* City.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = City.swift; sourceTree = "<group>"; };
 		B92D007B20F38A740080360E /* Commune.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Commune.swift; sourceTree = "<group>"; };
@@ -80,6 +112,58 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		370E46A420F3D37A003ED365 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				370E46A520F3D37F003ED365 /* Storyboard */,
+				370E46A820F3D3A2003ED365 /* AirQualityViewController.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		370E46A520F3D37F003ED365 /* Storyboard */ = {
+			isa = PBXGroup;
+			children = (
+				370E46A620F3D38B003ED365 /* AirQuality.storyboard */,
+			);
+			path = Storyboard;
+			sourceTree = "<group>";
+		};
+		370E46AA20F3D3F4003ED365 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				370E46AB20F3D402003ED365 /* AirQualityViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		370E46AD20F3D412003ED365 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				370E46AE20F3D41D003ED365 /* AirAPI.swift */,
+				370E46B020F3D45E003ED365 /* StationRouter.swift */,
+				370E46B220F3D54F003ED365 /* AllStationRequest.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		37A46A6E20F3D2510019C81C /* Networking */ = {
+			isa = PBXGroup;
+			children = (
+				37A46A7420F3D2640019C81C /* API.swift */,
+				37A46A7320F3D2640019C81C /* Constants.swift */,
+				37A46A7520F3D2640019C81C /* HTTPMethod.swift */,
+				37A46A7720F3D2640019C81C /* Info.plist */,
+				37A46A7120F3D2630019C81C /* JSONParameterEncoder.swift */,
+				37A46A6F20F3D2630019C81C /* ParameterEncoder.swift */,
+				37A46A7620F3D2640019C81C /* Request.swift */,
+				37A46A7220F3D2640019C81C /* Response.swift */,
+				37A46A7820F3D2640019C81C /* Router.swift */,
+				37A46A7020F3D2630019C81C /* URLParameterEncoder.swift */,
+			);
+			path = Networking;
+			sourceTree = "<group>";
+		};
 		B99B54E420F381B10044C317 = {
 			isa = PBXGroup;
 			children = (
@@ -133,6 +217,7 @@
 		B99B551E20F382080044C317 /* Module */ = {
 			isa = PBXGroup;
 			children = (
+				37A46A6E20F3D2510019C81C /* Networking */,
 				B99B551F20F3820B0044C317 /* AirQuality */,
 			);
 			path = Module;
@@ -141,26 +226,12 @@
 		B99B551F20F3820B0044C317 /* AirQuality */ = {
 			isa = PBXGroup;
 			children = (
+				370E46AD20F3D412003ED365 /* Controller */,
+				370E46AA20F3D3F4003ED365 /* ViewModel */,
+				370E46A420F3D37A003ED365 /* View */,
 				B99B552220F382250044C317 /* Model */,
-				B99B552120F382200044C317 /* ViewModel */,
-				B99B552020F3821C0044C317 /* View */,
 			);
 			path = AirQuality;
-			sourceTree = "<group>";
-		};
-		B99B552020F3821C0044C317 /* View */ = {
-			isa = PBXGroup;
-			children = (
-				B99B552320F3822A0044C317 /* Storyboard */,
-			);
-			path = View;
-			sourceTree = "<group>";
-		};
-		B99B552120F382200044C317 /* ViewModel */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = ViewModel;
 			sourceTree = "<group>";
 		};
 		B99B552220F382250044C317 /* Model */ = {
@@ -173,13 +244,6 @@
 				B92D007F20F38AA50080360E /* AqIndex.swift */,
 			);
 			path = Model;
-			sourceTree = "<group>";
-		};
-		B99B552320F3822A0044C317 /* Storyboard */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Storyboard;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -287,7 +351,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				B99B54FB20F381B30044C317 /* LaunchScreen.storyboard in Resources */,
+				370E46A720F3D38B003ED365 /* AirQuality.storyboard in Resources */,
 				B99B54F820F381B30044C317 /* Assets.xcassets in Resources */,
+				37A46A8120F3D2640019C81C /* Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -312,12 +378,26 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				37A46A7A20F3D2640019C81C /* URLParameterEncoder.swift in Sources */,
+				37A46A7D20F3D2640019C81C /* Constants.swift in Sources */,
 				B92D007C20F38A740080360E /* Commune.swift in Sources */,
 				B92D007E20F38A880080360E /* Sensor.swift in Sources */,
 				B92D007820F38A510080360E /* Station.swift in Sources */,
+				37A46A7C20F3D2640019C81C /* Response.swift in Sources */,
+				370E46B320F3D54F003ED365 /* AllStationRequest.swift in Sources */,
 				B99B54F120F381B10044C317 /* AppDelegate.swift in Sources */,
+				370E46AF20F3D41D003ED365 /* AirAPI.swift in Sources */,
+				37A46A8220F3D2640019C81C /* Router.swift in Sources */,
+				37A46A7B20F3D2640019C81C /* JSONParameterEncoder.swift in Sources */,
+				370E46AC20F3D402003ED365 /* AirQualityViewModel.swift in Sources */,
 				B92D008020F38AA50080360E /* AqIndex.swift in Sources */,
 				B92D007A20F38A600080360E /* City.swift in Sources */,
+				37A46A7F20F3D2640019C81C /* HTTPMethod.swift in Sources */,
+				370E46B120F3D45E003ED365 /* StationRouter.swift in Sources */,
+				37A46A8020F3D2640019C81C /* Request.swift in Sources */,
+				370E46A920F3D3A2003ED365 /* AirQualityViewController.swift in Sources */,
+				37A46A7E20F3D2640019C81C /* API.swift in Sources */,
+				37A46A7920F3D2640019C81C /* ParameterEncoder.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

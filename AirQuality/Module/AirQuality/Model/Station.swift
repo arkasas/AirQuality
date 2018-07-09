@@ -9,8 +9,8 @@
 struct Station: Codable {
     var id: Int
     var stationName: String
-    var gegrLat: Double
-    var gegrLon: Double
+    var gegrLat: String
+    var gegrLon: String
     var city: City
-    var addressStreet: String
+    var addressStreet: String?
 }
