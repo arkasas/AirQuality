@@ -13,6 +13,9 @@
 		370E46AF20F3D41D003ED365 /* AirAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 370E46AE20F3D41D003ED365 /* AirAPI.swift */; };
 		370E46B120F3D45E003ED365 /* StationRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 370E46B020F3D45E003ED365 /* StationRouter.swift */; };
 		370E46B320F3D54F003ED365 /* AllStationRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 370E46B220F3D54F003ED365 /* AllStationRequest.swift */; };
+		374870C920F526B70025857E /* SensorCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 374870C720F526B70025857E /* SensorCollectionViewCell.swift */; };
+		374870CA20F526B70025857E /* SensorCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 374870C820F526B70025857E /* SensorCollectionViewCell.xib */; };
+		374870CC20F52AF70025857E /* AirQualityModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 374870CB20F52AF70025857E /* AirQualityModel.swift */; };
 		37A46A7920F3D2640019C81C /* ParameterEncoder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37A46A6F20F3D2630019C81C /* ParameterEncoder.swift */; };
 		37A46A7A20F3D2640019C81C /* URLParameterEncoder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37A46A7020F3D2630019C81C /* URLParameterEncoder.swift */; };
 		37A46A7B20F3D2640019C81C /* JSONParameterEncoder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37A46A7120F3D2630019C81C /* JSONParameterEncoder.swift */; };
@@ -70,6 +73,9 @@
 		370E46AE20F3D41D003ED365 /* AirAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AirAPI.swift; sourceTree = "<group>"; };
 		370E46B020F3D45E003ED365 /* StationRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StationRouter.swift; sourceTree = "<group>"; };
 		370E46B220F3D54F003ED365 /* AllStationRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AllStationRequest.swift; sourceTree = "<group>"; };
+		374870C720F526B70025857E /* SensorCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SensorCollectionViewCell.swift; sourceTree = "<group>"; };
+		374870C820F526B70025857E /* SensorCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SensorCollectionViewCell.xib; sourceTree = "<group>"; };
+		374870CB20F52AF70025857E /* AirQualityModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AirQualityModel.swift; sourceTree = "<group>"; };
 		37A46A6F20F3D2630019C81C /* ParameterEncoder.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ParameterEncoder.swift; sourceTree = "<group>"; };
 		37A46A7020F3D2630019C81C /* URLParameterEncoder.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = URLParameterEncoder.swift; sourceTree = "<group>"; };
 		37A46A7120F3D2630019C81C /* JSONParameterEncoder.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JSONParameterEncoder.swift; sourceTree = "<group>"; };
@@ -137,6 +143,7 @@
 		370E46A420F3D37A003ED365 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				374870C620F526920025857E /* Cell */,
 				370E46A520F3D37F003ED365 /* Storyboard */,
 				370E46A820F3D3A2003ED365 /* AirQualityViewController.swift */,
 				B9B46A4020F4B01F00C3C523 /* StationsViewController.swift */,
@@ -172,6 +179,15 @@
 				B9B46A3C20F4AD7A00C3C523 /* UserDefaultController.swift */,
 			);
 			path = Controller;
+			sourceTree = "<group>";
+		};
+		374870C620F526920025857E /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+				374870C720F526B70025857E /* SensorCollectionViewCell.swift */,
+				374870C820F526B70025857E /* SensorCollectionViewCell.xib */,
+			);
+			path = Cell;
 			sourceTree = "<group>";
 		};
 		37A46A6E20F3D2510019C81C /* Networking */ = {
@@ -271,6 +287,7 @@
 				B92D007F20F38AA50080360E /* AqIndex.swift */,
 				B9B46A3A20F48FF000C3C523 /* SensorData.swift */,
 				B9B46A4520F4BB1500C3C523 /* StationCellModel.swift */,
+				374870CB20F52AF70025857E /* AirQualityModel.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -409,6 +426,7 @@
 			files = (
 				B9B46A3F20F4AF7A00C3C523 /* Stations.storyboard in Resources */,
 				B99B54FB20F381B30044C317 /* LaunchScreen.storyboard in Resources */,
+				374870CA20F526B70025857E /* SensorCollectionViewCell.xib in Resources */,
 				370E46A720F3D38B003ED365 /* AirQuality.storyboard in Resources */,
 				B99B54F820F381B30044C317 /* Assets.xcassets in Resources */,
 				37A46A8120F3D2640019C81C /* Info.plist in Resources */,
@@ -442,6 +460,7 @@
 				37A46A7D20F3D2640019C81C /* Constants.swift in Sources */,
 				B9B46A3220F48E0D00C3C523 /* DataRouter.swift in Sources */,
 				B92D007C20F38A740080360E /* Commune.swift in Sources */,
+				374870CC20F52AF70025857E /* AirQualityModel.swift in Sources */,
 				B92D007E20F38A880080360E /* Sensor.swift in Sources */,
 				B9B46A3920F48EDE00C3C523 /* AqGetDataRequest.swift in Sources */,
 				B9B46A3B20F48FF000C3C523 /* SensorData.swift in Sources */,
@@ -462,6 +481,7 @@
 				370E46B120F3D45E003ED365 /* StationRouter.swift in Sources */,
 				37A46A8020F3D2640019C81C /* Request.swift in Sources */,
 				B9B46A4120F4B01F00C3C523 /* StationsViewController.swift in Sources */,
+				374870C920F526B70025857E /* SensorCollectionViewCell.swift in Sources */,
 				B9B46A3420F48E2500C3C523 /* GetDataRequest.swift in Sources */,
 				370E46A920F3D3A2003ED365 /* AirQualityViewController.swift in Sources */,
 				37A46A7E20F3D2640019C81C /* API.swift in Sources */,

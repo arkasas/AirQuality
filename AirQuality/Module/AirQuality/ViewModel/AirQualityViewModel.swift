@@ -8,21 +8,25 @@
 
 import UIKit
 
-class AirQualityViewModel {
+class AirQualityViewModel: NSObject {
     fileprivate let stationRouter = StationRouter()
     fileprivate let dataRouter = DataRouter()
     fileprivate let aqRouter = AqIndexRouter()
     
-    init() {
-
-    }
-
+    fileprivate let sensorCollectionViewCellIdentifier = "sensorCollectionViewCell"
+    private var airQuality = [AirQualityModel]()
+    
     public func selectStation(_ station: Station) {
         UserDefaultController.station = station
     }
 
     public func reloadNavigationBar(_ navigationBar: UINavigationItem) {
         navigationBar.title = UserDefaultController.station?.stationName ?? ""
+    }
+    
+    public func setupCollectionView(_ collectionView: UICollectionView) {
+        collectionView.register(UINib(nibName: "SensorCollectionViewCell", bundle: nil), forCellWithReuseIdentifier: sensorCollectionViewCellIdentifier)
+        collectionView.dataSource = self
     }
 
     public func getSensors() {
@@ -37,6 +41,17 @@ class AirQualityViewModel {
         getAqIndex(id: station.id) { index in
             print(index)
         }
+    }
+}
+
+extension AirQualityViewModel: UICollectionViewDataSource {
+    
+    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+        return cellCount()
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+        return cell(collectionView: collectionView, indexPath: IndexPath)
     }
 }
 
@@ -61,5 +76,14 @@ private extension AirQualityViewModel {
         aqRouter.execute(request: request) { (result: Response<AqIndex>) in
             completion(result.value)
         }
+    }
+    
+    func cellCount() -> Int {
+        return airQuality.count
+    }
+    
+    func cell(collectionView: UICollectionView, indexPath: IndexPath) -> UICollectionViewCell {
+        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: sensorCollectionViewCellIdentifier, for: IndexPath) as! SensorCollectionViewCell
+        return cell
     }
 }

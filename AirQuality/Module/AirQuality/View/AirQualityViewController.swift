@@ -16,6 +16,8 @@ class AirQualityViewController: UIViewController {
 
     fileprivate let viewModel = AirQualityViewModel()
     
+    @IBOutlet private weak var collectionView: UICollectionView!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
