@@ -9,6 +9,7 @@
 struct Sensor: Codable {
     var id: Int
     var stationId: Int
+    var param: SensorParam
 }
 
 struct SensorParam: Codable {
