@@ -6,6 +6,7 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -25,26 +26,26 @@
                         <nil key="textColor"/>
                         <nil key="highlightedColor"/>
                     </label>
-                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="SBb-Dh-j2L">
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="SBb-Dh-j2L">
                         <rect key="frame" x="16" y="63.5" width="264" height="21"/>
                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                         <nil key="textColor"/>
                         <nil key="highlightedColor"/>
                     </label>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="HVm-rn-LhO">
-                        <rect key="frame" x="16" y="97.5" width="264" height="41"/>
+                        <rect key="frame" x="16" y="112.5" width="264" height="41"/>
                         <fontDescription key="fontDescription" type="system" pointSize="34"/>
                         <nil key="textColor"/>
                         <nil key="highlightedColor"/>
                     </label>
                 </subviews>
             </view>
-            <color key="backgroundColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <color key="backgroundColor" name="slateBlue"/>
             <constraints>
                 <constraint firstAttribute="trailing" secondItem="HVm-rn-LhO" secondAttribute="trailing" constant="16" id="61E-qo-tsc"/>
                 <constraint firstAttribute="trailing" secondItem="SBb-Dh-j2L" secondAttribute="trailing" constant="16" id="8gE-dL-izw"/>
                 <constraint firstItem="SBb-Dh-j2L" firstAttribute="top" secondItem="Khy-0a-eE2" secondAttribute="bottom" constant="8" id="F1y-o9-T8F"/>
-                <constraint firstItem="HVm-rn-LhO" firstAttribute="centerY" secondItem="ZTg-uK-7eu" secondAttribute="centerY" id="SAQ-pr-pJt"/>
+                <constraint firstItem="HVm-rn-LhO" firstAttribute="centerY" secondItem="ZTg-uK-7eu" secondAttribute="centerY" constant="15" id="SAQ-pr-pJt"/>
                 <constraint firstItem="SBb-Dh-j2L" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" constant="16" id="Sqw-WG-6aa"/>
                 <constraint firstItem="Khy-0a-eE2" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" constant="16" id="USJ-hu-6rr"/>
                 <constraint firstItem="HVm-rn-LhO" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" constant="16" id="agU-n7-s2r"/>
@@ -61,4 +62,9 @@
             <point key="canvasLocation" x="157" y="147"/>
         </collectionViewCell>
     </objects>
+    <resources>
+        <namedColor name="slateBlue">
+            <color red="0.41200000047683716" green="0.45500001311302185" blue="0.84700000286102295" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+    </resources>
 </document>

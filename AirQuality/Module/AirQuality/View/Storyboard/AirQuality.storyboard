@@ -7,6 +7,7 @@
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
         <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -20,12 +21,12 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="IeI-HC-cck" customClass="LineChartView" customModule="Charts">
-                                <rect key="frame" x="0.0" y="337.5" width="375" height="329.5"/>
+                                <rect key="frame" x="0.0" y="351.5" width="375" height="315.5"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             </view>
                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="Pmo-gb-6tH">
                                 <rect key="frame" x="0.0" y="64" width="375" height="273.5"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <color key="backgroundColor" name="ghotsWhite"/>
                                 <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" minimumLineSpacing="10" minimumInteritemSpacing="0.0" id="rLe-hH-DgD">
                                     <size key="itemSize" width="50" height="50"/>
                                     <size key="headerReferenceSize" width="0.0" height="0.0"/>
@@ -43,22 +44,31 @@
                                     </collectionViewCell>
                                 </cells>
                             </collectionView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="cMD-HH-Z3r">
+                                <rect key="frame" x="16" y="343.5" width="343" height="0.0"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="24"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="backgroundColor" name="ghotsWhite"/>
                         <constraints>
+                            <constraint firstItem="IeI-HC-cck" firstAttribute="top" secondItem="cMD-HH-Z3r" secondAttribute="bottom" constant="8" id="44H-jB-UIQ"/>
+                            <constraint firstItem="cMD-HH-Z3r" firstAttribute="top" secondItem="Pmo-gb-6tH" secondAttribute="bottom" constant="6" id="AdL-FC-zNa"/>
                             <constraint firstItem="IeI-HC-cck" firstAttribute="trailing" secondItem="6ae-o3-1Pe" secondAttribute="trailing" id="CdU-16-fS2"/>
+                            <constraint firstItem="cMD-HH-Z3r" firstAttribute="leading" secondItem="6ae-o3-1Pe" secondAttribute="leading" constant="16" id="LMA-Lv-59B"/>
                             <constraint firstItem="Pmo-gb-6tH" firstAttribute="top" secondItem="6ae-o3-1Pe" secondAttribute="top" id="N7b-VJ-csN"/>
+                            <constraint firstItem="6ae-o3-1Pe" firstAttribute="trailing" secondItem="cMD-HH-Z3r" secondAttribute="trailing" constant="16" id="Zz2-NX-TW5"/>
                             <constraint firstItem="Pmo-gb-6tH" firstAttribute="height" secondItem="WDZ-ri-X0U" secondAttribute="height" multiplier="0.41" id="dd0-kK-0eg"/>
                             <constraint firstItem="Pmo-gb-6tH" firstAttribute="leading" secondItem="6ae-o3-1Pe" secondAttribute="leading" id="iis-Co-ZK2"/>
                             <constraint firstItem="IeI-HC-cck" firstAttribute="leading" secondItem="6ae-o3-1Pe" secondAttribute="leading" id="nSq-Bo-E1F"/>
-                            <constraint firstItem="IeI-HC-cck" firstAttribute="top" secondItem="Pmo-gb-6tH" secondAttribute="bottom" id="pyo-fQ-Mls"/>
                             <constraint firstItem="Pmo-gb-6tH" firstAttribute="trailing" secondItem="6ae-o3-1Pe" secondAttribute="trailing" id="rvC-oR-VKK"/>
                             <constraint firstItem="IeI-HC-cck" firstAttribute="bottom" secondItem="6ae-o3-1Pe" secondAttribute="bottom" id="vzK-Kr-fb2"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6ae-o3-1Pe"/>
                     </view>
                     <navigationItem key="navigationItem" id="gVP-hf-q6h">
-                        <barButtonItem key="rightBarButtonItem" systemItem="edit" id="XrU-oj-N3c">
+                        <barButtonItem key="rightBarButtonItem" title="Edytuj" id="XrU-oj-N3c">
                             <connections>
                                 <action selector="editButtonClick" destination="QLS-0E-Ogj" id="AiE-h7-NwX"/>
                             </connections>
@@ -66,6 +76,7 @@
                     </navigationItem>
                     <connections>
                         <outlet property="collectionView" destination="Pmo-gb-6tH" id="2mY-Z6-V7O"/>
+                        <outlet property="dataLabel" destination="cMD-HH-Z3r" id="MRJ-eP-GUW"/>
                         <outlet property="lineChartView" destination="IeI-HC-cck" id="6ua-Vf-6wK"/>
                     </connections>
                 </viewController>
@@ -92,4 +103,9 @@
             <point key="canvasLocation" x="237.59999999999999" y="91.304347826086968"/>
         </scene>
     </scenes>
+    <resources>
+        <namedColor name="ghotsWhite">
+            <color red="0.97600001096725464" green="0.97600001096725464" blue="0.98400002717971802" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+    </resources>
 </document>

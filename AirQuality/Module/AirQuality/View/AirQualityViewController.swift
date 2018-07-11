@@ -19,6 +19,7 @@ class AirQualityViewController: UIViewController {
     
     @IBOutlet private weak var collectionView: UICollectionView!
     @IBOutlet private weak var lineChartView: LineChartView!
+    @IBOutlet private weak var dataLabel: UILabel!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -61,17 +62,42 @@ extension AirQualityViewController: UICollectionViewDelegateFlowLayout {
 
 }
 
+extension AirQualityViewController: AirQualityViewModelDelegate {
+    func reloadDescription(name: String, code: String) {
+        DispatchQueue.main.async {
+            self.dataLabel.text = "\(name.capitalizingFirstLetter()) (\(code))"
+        }
+    }
+}
+
 private extension AirQualityViewController {
 
     func setup() {
+        viewModel.delegate = self
         collectionView.delegate = self
-        viewModel.setupCollectionView(collectionView)
-        viewModel.setupChartView(lineChartView)
+        setupChartView()
+        setupCollectionView()
     }
 
+    func setupChartView() {
+        lineChartView.rightAxis.enabled = false
+        lineChartView.chartDescription?.text = nil
+        lineChartView.legend.enabled = false
+        lineChartView.isUserInteractionEnabled = false
+        lineChartView.xAxis.drawGridLinesEnabled = false
+        lineChartView.animate(xAxisDuration: 0.6)
+        lineChartView.xAxis.valueFormatter = ChartXAxisFormatter()
+        lineChartView.noDataText = "Pobieranie..."
+        viewModel.setupChartView(lineChartView)
+    }
+    
+    func setupCollectionView() {
+        collectionView.register(UINib(nibName: "SensorCollectionViewCell", bundle: nil), forCellWithReuseIdentifier: viewModel.sensorCollectionViewCellIdentifier)
+        viewModel.setupCollectionView(collectionView)
+    }
+    
     func reloadData() {
         viewModel.reloadNavigationBar(navigationItem)
-        viewModel.getSensors()
         viewModel.getAqIndex()
     }
 }

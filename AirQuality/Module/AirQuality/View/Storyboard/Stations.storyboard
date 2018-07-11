@@ -43,18 +43,19 @@
                         <viewLayoutGuide key="safeArea" id="SD0-h8-U2X"/>
                     </view>
                     <navigationItem key="navigationItem" title="Wybierz stacje" id="zDM-VN-Imz">
-                        <barButtonItem key="leftBarButtonItem" systemItem="cancel" id="2hU-yR-K0l">
+                        <barButtonItem key="leftBarButtonItem" title="Zamknij" id="2hU-yR-K0l">
                             <connections>
                                 <action selector="close" destination="e1W-tp-Lyh" id="Sb5-9m-ylP"/>
                             </connections>
                         </barButtonItem>
-                        <barButtonItem key="rightBarButtonItem" systemItem="done" id="63Y-Se-7O2">
+                        <barButtonItem key="rightBarButtonItem" enabled="NO" id="63Y-Se-7O2">
                             <connections>
                                 <action selector="doneClick" destination="e1W-tp-Lyh" id="ESI-Om-eqq"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
                     <connections>
+                        <outlet property="doneButton" destination="63Y-Se-7O2" id="MOA-iX-X5d"/>
                         <outlet property="tableView" destination="yTV-As-uEX" id="SEn-Ad-2Uo"/>
                     </connections>
                 </viewController>

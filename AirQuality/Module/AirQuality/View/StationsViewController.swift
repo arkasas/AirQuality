@@ -11,10 +11,16 @@ import UIKit
 class StationsViewController: UIViewController {
 
     fileprivate var viewModel: StationsViewModel!
-    fileprivate var selectedStation: Station!
+    fileprivate var selectedStation: Station! {
+        didSet {
+            doneButton.isEnabled = true
+            doneButton.title = "Zmień"
+        }
+    }
     fileprivate let searchController = UISearchController(searchResultsController: nil)
 
     @IBOutlet private weak var tableView: UITableView!
+    @IBOutlet private weak var doneButton: UIBarButtonItem!
 
     public weak var airDelegate: AirQualityViewControllerDelegate?
 

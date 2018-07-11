@@ -86,7 +86,7 @@ enum DateType: Codable {
             return
         }
 
-        if let val = try? decoder.singleValueContainer().decodeNil() {
+        if let _ = try? decoder.singleValueContainer().decodeNil() {
             self = .null()
             return
         }

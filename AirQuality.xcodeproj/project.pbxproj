@@ -13,6 +13,8 @@
 		370E46AF20F3D41D003ED365 /* AirAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 370E46AE20F3D41D003ED365 /* AirAPI.swift */; };
 		370E46B120F3D45E003ED365 /* StationRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 370E46B020F3D45E003ED365 /* StationRouter.swift */; };
 		370E46B320F3D54F003ED365 /* AllStationRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 370E46B220F3D54F003ED365 /* AllStationRequest.swift */; };
+		372700D320F6807E00BD655C /* String+Letter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 372700D220F6807E00BD655C /* String+Letter.swift */; };
+		372700D520F681CD00BD655C /* UIColor+Color.swift in Sources */ = {isa = PBXBuildFile; fileRef = 372700D420F681CD00BD655C /* UIColor+Color.swift */; };
 		374870C920F526B70025857E /* SensorCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 374870C720F526B70025857E /* SensorCollectionViewCell.swift */; };
 		374870CA20F526B70025857E /* SensorCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 374870C820F526B70025857E /* SensorCollectionViewCell.xib */; };
 		374870CC20F52AF70025857E /* AirQualityModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 374870CB20F52AF70025857E /* AirQualityModel.swift */; };
@@ -80,6 +82,8 @@
 		370E46AE20F3D41D003ED365 /* AirAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AirAPI.swift; sourceTree = "<group>"; };
 		370E46B020F3D45E003ED365 /* StationRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StationRouter.swift; sourceTree = "<group>"; };
 		370E46B220F3D54F003ED365 /* AllStationRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AllStationRequest.swift; sourceTree = "<group>"; };
+		372700D220F6807E00BD655C /* String+Letter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+Letter.swift"; sourceTree = "<group>"; };
+		372700D420F681CD00BD655C /* UIColor+Color.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+Color.swift"; sourceTree = "<group>"; };
 		374870C720F526B70025857E /* SensorCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SensorCollectionViewCell.swift; sourceTree = "<group>"; };
 		374870C820F526B70025857E /* SensorCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SensorCollectionViewCell.xib; sourceTree = "<group>"; };
 		374870CB20F52AF70025857E /* AirQualityModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AirQualityModel.swift; sourceTree = "<group>"; };
@@ -353,6 +357,8 @@
 			children = (
 				B9BB341F20F5F8C20031DA70 /* String+Date.swift */,
 				B9BB342820F61BDC0031DA70 /* UIView+UINib.swift */,
+				372700D220F6807E00BD655C /* String+Letter.swift */,
+				372700D420F681CD00BD655C /* UIColor+Color.swift */,
 			);
 			path = Extension;
 			sourceTree = "<group>";
@@ -521,6 +527,7 @@
 			files = (
 				37A46A7A20F3D2640019C81C /* URLParameterEncoder.swift in Sources */,
 				B9B46A4420F4B15B00C3C523 /* StationsViewModel.swift in Sources */,
+				372700D320F6807E00BD655C /* String+Letter.swift in Sources */,
 				B9BB342220F601690031DA70 /* ChartFormatter.swift in Sources */,
 				B9B46A3720F48EC200C3C523 /* AqIndexRouter.swift in Sources */,
 				37A46A7D20F3D2640019C81C /* Constants.swift in Sources */,
@@ -548,6 +555,7 @@
 				370E46B120F3D45E003ED365 /* StationRouter.swift in Sources */,
 				B9BB342920F61BDC0031DA70 /* UIView+UINib.swift in Sources */,
 				37A46A8020F3D2640019C81C /* Request.swift in Sources */,
+				372700D520F681CD00BD655C /* UIColor+Color.swift in Sources */,
 				B9BB342720F61B280031DA70 /* EmptyView.swift in Sources */,
 				B9B46A4120F4B01F00C3C523 /* StationsViewController.swift in Sources */,
 				B9BB342020F5F8C20031DA70 /* String+Date.swift in Sources */,
