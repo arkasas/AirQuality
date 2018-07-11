@@ -73,6 +73,7 @@ struct IndexLevel: Codable {
 enum DateType: Codable {
     case string(String)
     case number(Int)
+    case null()
 
     init(from decoder: Decoder) throws {
         if let string = try? decoder.singleValueContainer().decode(String.self) {
@@ -82,6 +83,11 @@ enum DateType: Codable {
 
         if let number = try? decoder.singleValueContainer().decode(Int.self) {
             self = .number(number)
+            return
+        }
+
+        if let val = try? decoder.singleValueContainer().decodeNil() {
+            self = .null()
             return
         }
 

@@ -12,6 +12,7 @@ class StationsViewController: UIViewController {
 
     fileprivate var viewModel: StationsViewModel!
     fileprivate var selectedStation: Station!
+    fileprivate let searchController = UISearchController(searchResultsController: nil)
 
     @IBOutlet private weak var tableView: UITableView!
 
@@ -21,7 +22,7 @@ class StationsViewController: UIViewController {
         super.viewDidLoad()
 
         tableView.delegate = self
-    
+
         viewModel = StationsViewModel(tableView: tableView)
         viewModel.getStations()
     }
@@ -40,6 +41,13 @@ class StationsViewController: UIViewController {
     }
 }
 
+extension StationsViewController: UISearchResultsUpdating {
+
+    func updateSearchResults(for searchController: UISearchController) {
+
+    }
+}
+
 extension StationsViewController: UITableViewDelegate {
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         tableView.cellForRow(at: indexPath)!.accessoryType = UITableViewCellAccessoryType.checkmark
@@ -52,3 +60,4 @@ extension StationsViewController: UITableViewDelegate {
         viewModel.unmarkStation(for: indexPath)
     }
 }
+

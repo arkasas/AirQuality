@@ -20,18 +20,18 @@
                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                 <subviews>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Khy-0a-eE2">
-                        <rect key="frame" x="16" y="12" width="264" height="31.5"/>
+                        <rect key="frame" x="16" y="24" width="264" height="31.5"/>
                         <fontDescription key="fontDescription" type="system" pointSize="26"/>
                         <nil key="textColor"/>
                         <nil key="highlightedColor"/>
                     </label>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="SBb-Dh-j2L">
-                        <rect key="frame" x="16" y="51.5" width="264" height="21"/>
+                        <rect key="frame" x="16" y="63.5" width="264" height="21"/>
                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                         <nil key="textColor"/>
                         <nil key="highlightedColor"/>
                     </label>
-                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HVm-rn-LhO">
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="HVm-rn-LhO">
                         <rect key="frame" x="16" y="97.5" width="264" height="41"/>
                         <fontDescription key="fontDescription" type="system" pointSize="34"/>
                         <nil key="textColor"/>
@@ -49,7 +49,7 @@
                 <constraint firstItem="Khy-0a-eE2" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" constant="16" id="USJ-hu-6rr"/>
                 <constraint firstItem="HVm-rn-LhO" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" constant="16" id="agU-n7-s2r"/>
                 <constraint firstAttribute="trailing" secondItem="Khy-0a-eE2" secondAttribute="trailing" constant="16" id="sjY-7k-b86"/>
-                <constraint firstItem="Khy-0a-eE2" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" constant="12" id="yPm-O5-IsV"/>
+                <constraint firstItem="Khy-0a-eE2" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" constant="24" id="yPm-O5-IsV"/>
             </constraints>
             <viewLayoutGuide key="safeArea" id="ZTg-uK-7eu"/>
             <size key="customSize" width="296" height="236"/>

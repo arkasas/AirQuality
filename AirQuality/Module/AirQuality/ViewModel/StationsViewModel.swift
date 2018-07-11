@@ -15,22 +15,31 @@ class StationsViewModel: NSObject {
 
     fileprivate var stations = [StationCellModel]()
     fileprivate var tableView: UITableView!
+    fileprivate var activityIndicator: UIActivityIndicatorView!
 
     init(tableView: UITableView) {
         super.init()
 
         self.tableView = tableView
         self.tableView.dataSource = self
+
+        setupActivityIndicator()
     }
 
     func getStations() {
+        startIndicator()
         getAllStation { stations in
             self.stations = stations.compactMap {
                 let model = StationCellModel(station: $0)
                 return model
             }
 
+            self.stations.sort(by: { (a, b) -> Bool in
+                return a.station.stationName < b.station.stationName
+            })
+
             DispatchQueue.main.async {
+                self.stopIndicator()
                 self.tableView.reloadData()
             }
         }
@@ -46,6 +55,16 @@ class StationsViewModel: NSObject {
 
     func unmarkStation(for indexPath: IndexPath) {
         stations[indexPath.row].isSelected = false
+    }
+
+    func startIndicator() {
+        tableView.separatorStyle = .none
+        activityIndicator.startAnimating()
+    }
+
+    func stopIndicator() {
+        tableView.separatorStyle = .singleLine
+        activityIndicator.stopAnimating()
     }
 
 }
@@ -79,6 +98,11 @@ private extension StationsViewModel {
         cell.selectionStyle = .none
         cell.accessoryType = (stations[indexPath.row]).isSelected ? .checkmark : .none
         return cell
+    }
+
+    func setupActivityIndicator() {
+        activityIndicator = UIActivityIndicatorView(activityIndicatorStyle: .gray)
+        tableView.backgroundView = activityIndicator
     }
 
 }

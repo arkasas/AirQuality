@@ -18,6 +18,7 @@ class AirQualityViewController: UIViewController {
     fileprivate let viewModel = AirQualityViewModel()
     
     @IBOutlet private weak var collectionView: UICollectionView!
+    @IBOutlet private weak var lineChartView: LineChartView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -45,10 +46,17 @@ extension AirQualityViewController: AirQualityViewControllerDelegate {
     }
 }
 
+extension AirQualityViewController: UICollectionViewDelegate {
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        let model = viewModel.getAqModel(by: indexPath)
+        viewModel.getData(by: model.code)
+    }
+}
+
 extension AirQualityViewController: UICollectionViewDelegateFlowLayout {
 
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
-        return CGSize(width: collectionView.frame.size.width * 0.8, height: collectionView.frame.size.height * 0.8)
+        return CGSize(width: collectionView.frame.size.height * 0.8, height: collectionView.frame.size.height * 0.8)
     }
 
 }
@@ -58,6 +66,7 @@ private extension AirQualityViewController {
     func setup() {
         collectionView.delegate = self
         viewModel.setupCollectionView(collectionView)
+        viewModel.setupChartView(lineChartView)
     }
 
     func reloadData() {

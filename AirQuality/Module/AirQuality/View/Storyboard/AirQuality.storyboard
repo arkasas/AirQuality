@@ -19,10 +19,14 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="Pmo-gb-6tH">
-                                <rect key="frame" x="0.0" y="64" width="375" height="267"/>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="IeI-HC-cck" customClass="LineChartView" customModule="Charts">
+                                <rect key="frame" x="0.0" y="337.5" width="375" height="329.5"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" minimumLineSpacing="10" minimumInteritemSpacing="10" id="rLe-hH-DgD">
+                            </view>
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="Pmo-gb-6tH">
+                                <rect key="frame" x="0.0" y="64" width="375" height="273.5"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" minimumLineSpacing="10" minimumInteritemSpacing="0.0" id="rLe-hH-DgD">
                                     <size key="itemSize" width="50" height="50"/>
                                     <size key="headerReferenceSize" width="0.0" height="0.0"/>
                                     <size key="footerReferenceSize" width="0.0" height="0.0"/>
@@ -39,16 +43,12 @@
                                     </collectionViewCell>
                                 </cells>
                             </collectionView>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="IeI-HC-cck">
-                                <rect key="frame" x="0.0" y="331" width="375" height="336"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                            </view>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstItem="IeI-HC-cck" firstAttribute="trailing" secondItem="6ae-o3-1Pe" secondAttribute="trailing" id="CdU-16-fS2"/>
                             <constraint firstItem="Pmo-gb-6tH" firstAttribute="top" secondItem="6ae-o3-1Pe" secondAttribute="top" id="N7b-VJ-csN"/>
-                            <constraint firstItem="Pmo-gb-6tH" firstAttribute="height" secondItem="WDZ-ri-X0U" secondAttribute="height" multiplier="0.4" id="dd0-kK-0eg"/>
+                            <constraint firstItem="Pmo-gb-6tH" firstAttribute="height" secondItem="WDZ-ri-X0U" secondAttribute="height" multiplier="0.41" id="dd0-kK-0eg"/>
                             <constraint firstItem="Pmo-gb-6tH" firstAttribute="leading" secondItem="6ae-o3-1Pe" secondAttribute="leading" id="iis-Co-ZK2"/>
                             <constraint firstItem="IeI-HC-cck" firstAttribute="leading" secondItem="6ae-o3-1Pe" secondAttribute="leading" id="nSq-Bo-E1F"/>
                             <constraint firstItem="IeI-HC-cck" firstAttribute="top" secondItem="Pmo-gb-6tH" secondAttribute="bottom" id="pyo-fQ-Mls"/>
@@ -66,6 +66,7 @@
                     </navigationItem>
                     <connections>
                         <outlet property="collectionView" destination="Pmo-gb-6tH" id="2mY-Z6-V7O"/>
+                        <outlet property="lineChartView" destination="IeI-HC-cck" id="6ua-Vf-6wK"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="PjD-qH-5Fb" userLabel="First Responder" sceneMemberID="firstResponder"/>

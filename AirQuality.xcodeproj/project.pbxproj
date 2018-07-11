@@ -49,6 +49,11 @@
 		B9B46A4620F4BB1500C3C523 /* StationCellModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9B46A4520F4BB1500C3C523 /* StationCellModel.swift */; };
 		B9BB341420F5E75E0031DA70 /* AqModelFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9BB341320F5E75E0031DA70 /* AqModelFactory.swift */; };
 		B9BB341920F5ED0D0031DA70 /* Charts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B9BB341820F5ED0D0031DA70 /* Charts.framework */; };
+		B9BB342020F5F8C20031DA70 /* String+Date.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9BB341F20F5F8C20031DA70 /* String+Date.swift */; };
+		B9BB342220F601690031DA70 /* ChartFormatter.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9BB342120F601690031DA70 /* ChartFormatter.swift */; };
+		B9BB342520F61A480031DA70 /* EmptyView.xib in Resources */ = {isa = PBXBuildFile; fileRef = B9BB342420F61A480031DA70 /* EmptyView.xib */; };
+		B9BB342720F61B280031DA70 /* EmptyView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9BB342620F61B280031DA70 /* EmptyView.swift */; };
+		B9BB342920F61BDC0031DA70 /* UIView+UINib.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9BB342820F61BDC0031DA70 /* UIView+UINib.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -117,6 +122,11 @@
 		B9B46A4520F4BB1500C3C523 /* StationCellModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StationCellModel.swift; sourceTree = "<group>"; };
 		B9BB341320F5E75E0031DA70 /* AqModelFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AqModelFactory.swift; sourceTree = "<group>"; };
 		B9BB341820F5ED0D0031DA70 /* Charts.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Charts.framework; path = Carthage/Build/iOS/Charts.framework; sourceTree = "<group>"; };
+		B9BB341F20F5F8C20031DA70 /* String+Date.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+Date.swift"; sourceTree = "<group>"; };
+		B9BB342120F601690031DA70 /* ChartFormatter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChartFormatter.swift; sourceTree = "<group>"; };
+		B9BB342420F61A480031DA70 /* EmptyView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = EmptyView.xib; sourceTree = "<group>"; };
+		B9BB342620F61B280031DA70 /* EmptyView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmptyView.swift; sourceTree = "<group>"; };
+		B9BB342820F61BDC0031DA70 /* UIView+UINib.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+UINib.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -148,6 +158,7 @@
 		370E46A420F3D37A003ED365 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				B9BB342320F61A3C0031DA70 /* Custom */,
 				374870C620F526920025857E /* Cell */,
 				370E46A520F3D37F003ED365 /* Storyboard */,
 				370E46A820F3D3A2003ED365 /* AirQualityViewController.swift */,
@@ -183,6 +194,7 @@
 				B9B46A3520F48EA400C3C523 /* AqIndex */,
 				B9B46A3C20F4AD7A00C3C523 /* UserDefaultController.swift */,
 				B9BB341320F5E75E0031DA70 /* AqModelFactory.swift */,
+				B9BB342120F601690031DA70 /* ChartFormatter.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -267,6 +279,7 @@
 		B99B551E20F382080044C317 /* Module */ = {
 			isa = PBXGroup;
 			children = (
+				B9BB341E20F5F8B60031DA70 /* Extension */,
 				37A46A6E20F3D2510019C81C /* Networking */,
 				B99B551F20F3820B0044C317 /* AirQuality */,
 			);
@@ -333,6 +346,24 @@
 				B9BB341820F5ED0D0031DA70 /* Charts.framework */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		B9BB341E20F5F8B60031DA70 /* Extension */ = {
+			isa = PBXGroup;
+			children = (
+				B9BB341F20F5F8C20031DA70 /* String+Date.swift */,
+				B9BB342820F61BDC0031DA70 /* UIView+UINib.swift */,
+			);
+			path = Extension;
+			sourceTree = "<group>";
+		};
+		B9BB342320F61A3C0031DA70 /* Custom */ = {
+			isa = PBXGroup;
+			children = (
+				B9BB342420F61A480031DA70 /* EmptyView.xib */,
+				B9BB342620F61B280031DA70 /* EmptyView.swift */,
+			);
+			path = Custom;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -443,6 +474,7 @@
 				B9B46A3F20F4AF7A00C3C523 /* Stations.storyboard in Resources */,
 				B99B54FB20F381B30044C317 /* LaunchScreen.storyboard in Resources */,
 				374870CA20F526B70025857E /* SensorCollectionViewCell.xib in Resources */,
+				B9BB342520F61A480031DA70 /* EmptyView.xib in Resources */,
 				370E46A720F3D38B003ED365 /* AirQuality.storyboard in Resources */,
 				B99B54F820F381B30044C317 /* Assets.xcassets in Resources */,
 				37A46A8120F3D2640019C81C /* Info.plist in Resources */,
@@ -489,6 +521,7 @@
 			files = (
 				37A46A7A20F3D2640019C81C /* URLParameterEncoder.swift in Sources */,
 				B9B46A4420F4B15B00C3C523 /* StationsViewModel.swift in Sources */,
+				B9BB342220F601690031DA70 /* ChartFormatter.swift in Sources */,
 				B9B46A3720F48EC200C3C523 /* AqIndexRouter.swift in Sources */,
 				37A46A7D20F3D2640019C81C /* Constants.swift in Sources */,
 				B9B46A3220F48E0D00C3C523 /* DataRouter.swift in Sources */,
@@ -513,8 +546,11 @@
 				B92D007A20F38A600080360E /* City.swift in Sources */,
 				37A46A7F20F3D2640019C81C /* HTTPMethod.swift in Sources */,
 				370E46B120F3D45E003ED365 /* StationRouter.swift in Sources */,
+				B9BB342920F61BDC0031DA70 /* UIView+UINib.swift in Sources */,
 				37A46A8020F3D2640019C81C /* Request.swift in Sources */,
+				B9BB342720F61B280031DA70 /* EmptyView.swift in Sources */,
 				B9B46A4120F4B01F00C3C523 /* StationsViewController.swift in Sources */,
+				B9BB342020F5F8C20031DA70 /* String+Date.swift in Sources */,
 				374870C920F526B70025857E /* SensorCollectionViewCell.swift in Sources */,
 				B9B46A3420F48E2500C3C523 /* GetDataRequest.swift in Sources */,
 				370E46A920F3D3A2003ED365 /* AirQualityViewController.swift in Sources */,
