@@ -9,7 +9,7 @@
 import UIKit
 
 class StationsViewController: UIViewController {
-
+    
     fileprivate var viewModel: StationsViewModel!
     fileprivate var selectedStation: Station! {
         didSet {
@@ -17,22 +17,21 @@ class StationsViewController: UIViewController {
             doneButton.title = "Zmień"
         }
     }
-    fileprivate let searchController = UISearchController(searchResultsController: nil)
-
+    
     @IBOutlet private weak var tableView: UITableView!
     @IBOutlet private weak var doneButton: UIBarButtonItem!
-
+    
     public weak var airDelegate: AirQualityViewControllerDelegate?
-
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        
         tableView.delegate = self
-
+        
         viewModel = StationsViewModel(tableView: tableView)
         viewModel.getStations()
     }
-
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
     }
@@ -41,28 +40,19 @@ class StationsViewController: UIViewController {
         airDelegate?.didSelect(newStation: selectedStation)
         dismiss(animated: true, completion: nil)
     }
-
+    
     @IBAction private func close() {
         dismiss(animated: true, completion: nil)
     }
 }
 
-extension StationsViewController: UISearchResultsUpdating {
-
-    func updateSearchResults(for searchController: UISearchController) {
-
-    }
-}
-
 extension StationsViewController: UITableViewDelegate {
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        tableView.cellForRow(at: indexPath)!.accessoryType = UITableViewCellAccessoryType.checkmark
         selectedStation = viewModel.station(by: indexPath).station
         viewModel.markStation(for: indexPath)
     }
-
+    
     func tableView(_ tableView: UITableView, didDeselectRowAt indexPath: IndexPath) {
-        tableView.cellForRow(at: indexPath)!.accessoryType = UITableViewCellAccessoryType.none
         viewModel.unmarkStation(for: indexPath)
     }
 }

@@ -18,7 +18,7 @@ final class AqModelFactory {
         case .pm10:
             return AirQualityModel(name: "Pył zawieszony PM10", code: "PM10", calcDate: model.pm10CalcDate, indexLevel: model.pm10IndexLevel, sourceDataDate: model.pm10SourceDataDate)
         case .pm25:
-            return AirQualityModel(name: "Pył zawieszony PM25", code: "PM25", calcDate: model.pm25CalcDate, indexLevel: model.pm25IndexLevel, sourceDataDate: model.pm25SourceDataDate)
+            return AirQualityModel(name: "Pył zawieszony PM2.5", code: "PM2.5", calcDate: model.pm25CalcDate, indexLevel: model.pm25IndexLevel, sourceDataDate: model.pm25SourceDataDate)
         case .so2:
             return AirQualityModel(name: "Dwutlenek siarki", code: "SO2", calcDate: model.so2CalcDate, indexLevel: model.so2IndexLevel, sourceDataDate: model.so2SourceDataDate)
         case .o3:
