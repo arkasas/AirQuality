@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import Charts
 
 protocol AirQualityViewControllerDelegate: class {
     func didSelect(newStation station: Station)
@@ -21,6 +22,7 @@ class AirQualityViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
+        setup()
         reloadData()
     }
 
@@ -43,7 +45,21 @@ extension AirQualityViewController: AirQualityViewControllerDelegate {
     }
 }
 
+extension AirQualityViewController: UICollectionViewDelegateFlowLayout {
+
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
+        return CGSize(width: collectionView.frame.size.width * 0.8, height: collectionView.frame.size.height * 0.8)
+    }
+
+}
+
 private extension AirQualityViewController {
+
+    func setup() {
+        collectionView.delegate = self
+        viewModel.setupCollectionView(collectionView)
+    }
+
     func reloadData() {
         viewModel.reloadNavigationBar(navigationItem)
         viewModel.getSensors()

@@ -9,9 +9,22 @@
 import Foundation
 
 class AirQualityModel {
-    var sensor: Sensor
-    
-    init(sensor: Sensor) {
-        self.sensor = sensor
+    var name: String
+    var code: String
+
+    var calcDate: DateType
+    var indexLevel: IndexLevel?
+    var sourceDataDate: String?
+
+    init(name: String, code: String, calcDate: DateType, indexLevel: IndexLevel? = nil, sourceDataDate: String? = nil) {
+        self.name = name
+        self.code = code
+        self.calcDate = calcDate
+        self.indexLevel = indexLevel
+        self.sourceDataDate = sourceDataDate
+    }
+
+    func isValid() -> Bool {
+        return indexLevel != nil
     }
 }

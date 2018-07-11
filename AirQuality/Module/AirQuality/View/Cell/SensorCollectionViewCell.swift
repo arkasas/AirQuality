@@ -12,9 +12,16 @@ class SensorCollectionViewCell: UICollectionViewCell {
 
     @IBOutlet private weak var nameLabel: UILabel!
     @IBOutlet private weak var codeLabel: UILabel!
+    @IBOutlet private weak var indexLevelNameLabel: UILabel!
     
     override func awakeFromNib() {
         super.awakeFromNib()
+    }
+
+    public func configure(with model: AirQualityModel) {
+        nameLabel.text = model.name
+        codeLabel.text = model.code
+        indexLevelNameLabel.text = model.indexLevel?.indexLevelName
     }
 
 }

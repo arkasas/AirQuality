@@ -47,6 +47,8 @@
 		B9B46A4120F4B01F00C3C523 /* StationsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9B46A4020F4B01F00C3C523 /* StationsViewController.swift */; };
 		B9B46A4420F4B15B00C3C523 /* StationsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9B46A4320F4B15B00C3C523 /* StationsViewModel.swift */; };
 		B9B46A4620F4BB1500C3C523 /* StationCellModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9B46A4520F4BB1500C3C523 /* StationCellModel.swift */; };
+		B9BB341420F5E75E0031DA70 /* AqModelFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9BB341320F5E75E0031DA70 /* AqModelFactory.swift */; };
+		B9BB341920F5ED0D0031DA70 /* Charts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B9BB341820F5ED0D0031DA70 /* Charts.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -113,6 +115,8 @@
 		B9B46A4020F4B01F00C3C523 /* StationsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StationsViewController.swift; sourceTree = "<group>"; };
 		B9B46A4320F4B15B00C3C523 /* StationsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StationsViewModel.swift; sourceTree = "<group>"; };
 		B9B46A4520F4BB1500C3C523 /* StationCellModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StationCellModel.swift; sourceTree = "<group>"; };
+		B9BB341320F5E75E0031DA70 /* AqModelFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AqModelFactory.swift; sourceTree = "<group>"; };
+		B9BB341820F5ED0D0031DA70 /* Charts.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Charts.framework; path = Carthage/Build/iOS/Charts.framework; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -120,6 +124,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B9BB341920F5ED0D0031DA70 /* Charts.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -177,6 +182,7 @@
 				B9B46A3020F48DFA00C3C523 /* DataNetwork */,
 				B9B46A3520F48EA400C3C523 /* AqIndex */,
 				B9B46A3C20F4AD7A00C3C523 /* UserDefaultController.swift */,
+				B9BB341320F5E75E0031DA70 /* AqModelFactory.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -214,6 +220,7 @@
 				B99B550420F381B30044C317 /* AirQualityTests */,
 				B99B550F20F381B30044C317 /* AirQualityUITests */,
 				B99B54EE20F381B10044C317 /* Products */,
+				B9BB341720F5ED0D0031DA70 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -320,6 +327,14 @@
 			path = AqIndex;
 			sourceTree = "<group>";
 		};
+		B9BB341720F5ED0D0031DA70 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				B9BB341820F5ED0D0031DA70 /* Charts.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -330,6 +345,7 @@
 				B99B54E920F381B10044C317 /* Sources */,
 				B99B54EA20F381B10044C317 /* Frameworks */,
 				B99B54EB20F381B10044C317 /* Resources */,
+				B9BB341A20F5ED190031DA70 /* ShellScript */,
 			);
 			buildRules = (
 			);
@@ -449,6 +465,23 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		B9BB341A20F5ED190031DA70 /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"$(SRCROOT)/Carthage/Build/iOS/Charts.framework",
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "/usr/local/bin/carthage copy-frameworks";
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		B99B54E920F381B10044C317 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
@@ -462,6 +495,7 @@
 				B92D007C20F38A740080360E /* Commune.swift in Sources */,
 				374870CC20F52AF70025857E /* AirQualityModel.swift in Sources */,
 				B92D007E20F38A880080360E /* Sensor.swift in Sources */,
+				B9BB341420F5E75E0031DA70 /* AqModelFactory.swift in Sources */,
 				B9B46A3920F48EDE00C3C523 /* AqGetDataRequest.swift in Sources */,
 				B9B46A3B20F48FF000C3C523 /* SensorData.swift in Sources */,
 				B92D007820F38A510080360E /* Station.swift in Sources */,
@@ -652,6 +686,10 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 5AG4QGJY7S;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+				);
 				INFOPLIST_FILE = AirQuality/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -670,6 +708,10 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 5AG4QGJY7S;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+				);
 				INFOPLIST_FILE = AirQuality/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",

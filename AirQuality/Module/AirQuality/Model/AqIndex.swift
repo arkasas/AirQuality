@@ -6,6 +6,17 @@
 //  Copyright © 2018 Arkadiusz Pituła. All rights reserved.
 //
 
+enum AqType {
+    case so2
+    case no2
+    case pm10
+    case pm25
+    case c6h6
+    case o3
+
+    static let allValues = [so2, no2, pm10, pm25, c6h6, o3]
+}
+
 struct AqIndex: Codable {
     var id: Int
 
@@ -51,6 +62,7 @@ struct AqIndex: Codable {
     
     var stIndexStatus: Bool
     var stIndexCrParam: String
+
 }
 
 struct IndexLevel: Codable {
